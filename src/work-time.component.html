@@ -1,0 +1,90 @@
+<div>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Regular</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Ramadan</a>
+    </li>
+</ul>
+<div class="card card-block border-top-0 rounded-0">
+    <table class="work-time-table">
+        <tbody>
+            <tr>
+                <th>Time</th>
+                <th class="week-name-table">Mo</th>
+                <th class="week-name-table">Tu</th>
+                <th class="week-name-table">We</th>
+                <th class="week-name-table">Th</th>
+                <th class="week-name-table">Fr</th>
+                <th class="week-name-table">Sa</th>
+                <th class="week-name-table">Su</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap">10:00&nbsp;&ndash;&nbsp;13:00</td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><button type="button" class="close" style="font-size: 90%">&times;</button></td>
+            </tr>
+            <tr>
+                <td style="white-space: nowrap">14:00&nbsp;&ndash;&nbsp;18:30</td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><input type="checkbox" class="form-control"></td>
+                <td><button type="button" class="close" style="font-size: 90%">&times;</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div>
+        <button *ngIf="!addFormView"
+            type="button"
+            class="btn btn-sm btn-secondary"
+            (click)="addFormView = true">+ Add period</button>
+
+        <table class="table-sm w-100" *ngIf="addFormView">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <input type="number" class="form-control" placeholder="10">
+                            <input type="number" class="form-control" placeholder="00">
+                        </div>
+                    </td>
+                    <td>&ndash;</td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <input type="number" class="form-control" placeholder="18">
+                            <input type="number" class="form-control" placeholder="00">
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="addFormView = false">+ Add</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
