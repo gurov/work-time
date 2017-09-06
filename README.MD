@@ -1,4 +1,5 @@
 # work-time
+![work-time preview](https://gurov.github.io/work-time/work-time-example.png)
 
 ## Installation
 
