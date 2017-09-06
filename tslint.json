@@ -21,7 +21,13 @@
       140
     ],
     "member-access": false,
+    "member-ordering": [
+      true,
+      "static-before-instance",
+      "variables-before-functions"
+    ],
     "no-arg": true,
+    "no-bitwise": true,
     "no-console": [
       true,
       "debug",
@@ -35,6 +41,7 @@
     "no-duplicate-variable": true,
     "no-empty": false,
     "no-eval": true,
+    "no-inferrable-types": true,
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
@@ -56,6 +63,9 @@
       "single"
     ],
     "radix": true,
+    "semicolon": [
+      "always"
+    ],
     "triple-equals": [
       true,
       "allow-null-check"

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/gurov/work-time"
   },
   "author": {
     "name": "Pavel Gurov",
@@ -14,9 +14,11 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/gurov/work-time/issues"
   },
+  "main": "work-time.umd.js",
   "module": "work-time.js",
+  "jsnext:main": "work-time.js",
   "typings": "work-time.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",

@@ -22,7 +22,7 @@
                 class="text-center">
                 <i class="fa fa-check"
                    *ngIf="readonly && timeTable[i][day]"
-                   aria-hidden="true"></i>
+                   aria-hidden="true">✔</i>
                 <input type="checkbox"
                        [hidden]="readonly"
                        (change)="changeTime()"

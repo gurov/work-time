@@ -5,7 +5,7 @@ import { WorkTimeType } from './types';
 import { Time } from './interfaces';
 
 @Component({
-    selector: 'am-work-time',
+    selector: 'work-time',
     templateUrl: 'work-time.component.html',
     styles: [`
         .work-time-wrapper {
@@ -75,7 +75,7 @@ export class WorkTimeComponent implements ControlValueAccessor, Validator {
     public week = ['1', '2', '3', '4', '5', '6', '7'];
     public addFormView: boolean = false;
     public timeTable: TimeTable;
-    public intervals: string[];
+    public intervals: string[] = [];
     public startTime: Time = {h: 0, m: 0};
     public endTime: Time = {h: 18, m: 0};
     @Input() workTimeType: WorkTimeType = WorkTimeType.REGULAR;

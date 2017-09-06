@@ -8,24 +8,15 @@ To install this library, run:
 $ npm install work-time --save
 ```
 
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install work-time
-```
-
-and then from your Angular `AppModule`:
+In your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'work-time';
+// Import 
+import { WorkTimeModule } from 'work-time';
 
 @NgModule({
   declarations: [
@@ -33,39 +24,34 @@ import { SampleModule } from 'work-time';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    WorkTimeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 ```
+## Using
+Once WorkTimeModule is imported, you can use `<work-time>` component:
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
-
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+###### Component
+```typescript
+import { WorkTimeType } from "work-time";
+// ...
+public data = [];
+public workTimeType = WorkTimeType.REGULAR;
+public readOnly = false;
 ```
 
-## Development
+###### Template
+```html
+<work-time
+      [(ngModel)]="data"
+      [workTimeType]="workTimeType"
+      [readonly]="readOnly"></work-time>
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
-
-```bash
-$ npm run build
 ```
 
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
-```
 
 ## License
 
