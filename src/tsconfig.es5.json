@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "module": "es2015",
+    "module": "commonjs",
     "target": "es5",
     "baseUrl": ".",
     "stripInternal": true,
@@ -11,7 +11,7 @@
     "outDir": "../build",
     "rootDir": ".",
     "lib": [
-      "es2015",
+      "es2017",
       "dom"
     ],
     "skipLibCheck": true,
