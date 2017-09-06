@@ -1,5 +1,8 @@
 # work-time
+It's small component for change work time scheduler. Preview:
 ![work-time preview](https://gurov.github.io/work-time/work-time-example.png)
+
+See and try example [here](https://gurov.github.io/work-time/).
 
 ## Installation
 
