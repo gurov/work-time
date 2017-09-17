@@ -1,27 +1,26 @@
 # work-time
-It's small component for change work time scheduler. Preview:
+
+Это маленький компонент для редактирования рабочего расписания. Как выглядит:
 ![work-time preview](https://gurov.github.io/work-time/work-time-example.png)
 
-See and try example [here](https://gurov.github.io/work-time/).
+Посмотреть и попробовать можно [здесь](https://gurov.github.io/work-time/).
 
-## Installation
+## Установка
 
-To install this library, run:
+Для установки этой библиотеки, запустите:
 
 ```bash
 $ npm install work-time --save
 ```
 
-In your Angular `AppModule`:
+В твоём Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-
 // Import 
 import { WorkTimeModule } from 'work-time';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -35,10 +34,13 @@ import { WorkTimeModule } from 'work-time';
 })
 export class AppModule { }
 ```
-## Using
-Once WorkTimeModule is imported, you can use `<work-time>` component:
 
-###### Component
+## Использование
+
+Однажды импортировав WorkTimeModule, вы можете использовать `<work-time>` компонент следующим образом:
+
+###### Компонент
+
 ```typescript
 import { WorkTimeType } from "work-time";
 // ...
@@ -47,16 +49,15 @@ public workTimeType = WorkTimeType.REGULAR;
 public readOnly = false;
 ```
 
-###### Template
+###### HTML шаблон
+
 ```html
 <work-time
       [(ngModel)]="data"
       [workTimeType]="workTimeType"
       [readonly]="readOnly"></work-time>
-
 ```
 
-
-## License
+## Лицензия
 
 MIT © [Pavel Gurov](mailto:lucius.gu@ya.ru)
