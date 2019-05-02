@@ -4,6 +4,10 @@ It's small component for change work time scheduler. Preview:
 
 See and try example [here](https://gurov.github.io/work-time/).
 
+## Required libs
+* angular 7+
+* bootstrap 4+
+
 ## Installation
 
 To install this library, run:
