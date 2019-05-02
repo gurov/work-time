@@ -1,0 +1,41 @@
+<div class="container mt-5">
+
+  <h1>work-time</h1>
+  <p>It's component for edit/display work-time on the angular 4</p>
+  <div>
+    <form class="form-inline">
+  
+      <label class="mr-sm-2" for="inlineFormCustomSelectPref">Work Time Type:</label>
+  
+      <select name="workTimeType" [(ngModel)]="workTimeType" class="form-control">
+        <option value="RAMADAN">RAMADAN</option>
+        <option value="REGULAR">REGULAR</option>
+      </select>
+  
+      <div class="form-check mb-2 mr-sm-2 mb-sm-0 ml-2">
+        <label class="form-check-label">
+        <input class="form-check-input" [(ngModel)]="readOnly" name="readOnly" type="checkbox"> Readonly
+      </label>
+      </div>
+  
+    </form>
+  </div>
+  <hr>
+  <div class="row">
+  
+    <div class="col-md-6">
+      <h4>Work time table</h4>
+      <work-time
+      [(ngModel)]="data"
+        [workTimeType]="workTimeType"
+        [readonly]="readOnly"></work-time>
+    </div>
+    <div class="col-md-6">
+      <h4>Data</h4>
+      <pre>{{data|json}}</pre>
+    </div>
+  
+  </div>
+  
+  
+  </div>

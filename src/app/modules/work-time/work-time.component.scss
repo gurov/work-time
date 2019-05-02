@@ -1,0 +1,53 @@
+.work-time-wrapper {
+    max-width: 400px;
+}
+
+.table-sm td {
+    padding: 0.3rem 0.2rem;
+}
+
+.work-time-table {
+    width: 100%;
+}
+
+.work-time-table td {
+    padding: 0.3rem 1px;
+}
+
+.work-time-table th, .work-time-table td.period {
+    padding: 0.3rem;
+}
+
+.work-time-table th {
+    font-size: 90%;
+}
+
+.work-time-table .form-control {
+    cursor: pointer;
+}
+
+.week-name-table {
+    width: 9%;
+    text-align: center;
+}
+
+.intersection {
+    background-color: #ec9595;
+}
+
+.close {
+    font-size: 90%;
+    float: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.form-control + .form-control {
+    border-left: none;
+}
+.added-buttons {
+    width: 90px;
+  .btn-group {
+      text-align: right;
+  }  
+}
