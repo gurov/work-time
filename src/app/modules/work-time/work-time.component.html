@@ -4,13 +4,13 @@
         <tbody>
         <tr>
             <th title="Time period">Period</th>
-            <th class="week-name-table" title="Sunday">Su</th>
-            <th class="week-name-table" title="Monday">Mo</th>
-            <th class="week-name-table" title="Tuesday">Tu</th>
-            <th class="week-name-table" title="Wednesday">We</th>
-            <th class="week-name-table" title="Thursday">Th</th>
-            <th class="week-name-table" title="Friday">Fr</th>
-            <th class="week-name-table" title="Saturday">Sa</th>
+            <th class="week-name-table" title="Sunday">{{ getDayFormat('Sunday') }}</th>
+            <th class="week-name-table" title="Monday">{{ getDayFormat('Monday') }}</th>
+            <th class="week-name-table" title="Tuesday">{{ getDayFormat('Tuesday') }}</th>
+            <th class="week-name-table" title="Wednesday">{{ getDayFormat('Wednesday') }}</th>
+            <th class="week-name-table" title="Thursday">{{ getDayFormat('Thursday') }}</th>
+            <th class="week-name-table" title="Friday">{{ getDayFormat('Friday') }}</th>
+            <th class="week-name-table" title="Saturday">{{ getDayFormat('Saturday') }}</th>
             <th [hidden]="readonly"></th>
         </tr>
         <tr [hidden]="intervals?.length">
@@ -28,9 +28,9 @@
                         [hidden]="readonly"
                         (change)="changeTime()"
                         class="form-check-input"
-                        [(ngModel)]="timeTable[i][day]">    
-                </div>   
-                
+                        [(ngModel)]="timeTable[i][day]">
+                </div>
+
             </td>
             <td [hidden]="readonly">
                 <button class="close" (click)="deleteInterval(i)">&times;</button>
