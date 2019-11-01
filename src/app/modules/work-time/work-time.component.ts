@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef, Input, Output, EventEmitter } from '@angular/core';
 import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validator } from '@angular/forms';
 import { TimeTable, WorkTime } from './models';
 import { WorkTimeType } from './types';
@@ -33,6 +33,8 @@ export class WorkTimeComponent implements ControlValueAccessor, Validator {
     public endTime: Time = {h: 18, m: 0};
     @Input() workTimeType: WorkTimeType = WorkTimeType.REGULAR;
     @Input() readonly = false;
+    @Input() longNames = false;
+    @Output() workTimesUpdated = new EventEmitter();
 
     constructor() {
     }
@@ -127,6 +129,7 @@ export class WorkTimeComponent implements ControlValueAccessor, Validator {
         delete this.timeTable[interval];
         this.intervals = this.intervals.filter(i => i !== interval);
         this.workTimes = this.timeTable;
+        this.emitUpdatedEvent();
     }
 
     timeFormat(time: Time): string {
@@ -153,6 +156,7 @@ export class WorkTimeComponent implements ControlValueAccessor, Validator {
             });
         }
         this.addFormView = false;
+        this.emitUpdatedEvent();
     }
 
     get workTimes() {
@@ -172,6 +176,7 @@ export class WorkTimeComponent implements ControlValueAccessor, Validator {
 
     changeTime() {
         this.workTimes = this.timeTable;
+        this.emitUpdatedEvent();
     }
 
     writeValue(workTimes: WorkTime[] = []): void {
@@ -188,6 +193,17 @@ export class WorkTimeComponent implements ControlValueAccessor, Validator {
     }
 
     registerOnTouched(fn: any): void {
+    }
+
+    emitUpdatedEvent(){
+      this.workTimesUpdated.emit('updated');
+    }
+
+    getDayFormat(day){
+      if(this.longNames){
+        return day;
+      }
+      return day.substring(0, 2);
     }
 
 

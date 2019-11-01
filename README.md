@@ -59,8 +59,25 @@ public readOnly = false;
       [readonly]="readOnly"></work-time>
 
 ```
+###### Long Names
+You can get a full textual representation of the day of the week eg. `Saturday` instead of `Sat` by setting `longNames` to true: 
+```html
+<work-time
+      [(ngModel)]="data"
+      [workTimeType]="workTimeType"
+      [longNames]="true"></work-time>
 
+```
 
+###### Events
+You can catch the `workTimesUpdated` event so you can execute actions when the work times are updated:
+```html
+<work-time
+      [(ngModel)]="data"
+      [workTimeType]="workTimeType"
+      (workTimesUpdated)="doSomething()"></work-time>
+
+```
 ## License
 
 MIT © [Pavel Gurov](mailto:lucius.gu@ya.ru)
